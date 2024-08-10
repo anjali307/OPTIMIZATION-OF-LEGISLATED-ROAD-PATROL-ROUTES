@@ -1,0 +1,89 @@
+/* ====== Patrol Table Styles ======= */
+.patrol-routine-table.card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+}
+
+.patrol-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-secondary-color);
+    border-radius: 10px;
+}
+
+.patrol-table th, .patrol-table td {
+    padding: 12px;
+}
+
+.patrol-table td {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.patrol-table th {
+    background-color: var(--bg-secondary-color);
+    text-align: center;
+}
+
+.patrol-table tbody tr:nth-child(odd) {
+    background-color: var(--bg-primary-color);
+}
+
+.patrol-table tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary-color);
+}
+
+.patrol-table td:nth-child(1),
+.patrol-table td:nth-child(2),
+.patrol-table td:nth-child(3), 
+.patrol-table td:nth-child(4), 
+.patrol-table th:nth-child(1),
+.patrol-table th:nth-child(2),
+.patrol-table th:nth-child(3),
+.patrol-table th:nth-child(4){
+    border-right: var(--primary-border-color);
+}
+
+.patrol-table tr{
+    border-bottom: var(--primary-border-color);
+}
+
+.patrol-table tbody tr:hover {
+    background-color: var(--bg-primary-color);
+}
+
+.view-more-btn.primary-button {
+    margin-bottom: 10px;
+    border: none;
+    outline: 0;
+}
+
+/* ======  Button Styles ======= */
+.edit-btn, .delete-btn {
+    padding: 4px 8px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    fill: var(--bg-secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: var(--primary-color); 
+}
+
+.edit-btn:hover {
+    background-color: var(--button-primary-hover-color); 
+}
+
+.delete-btn {
+    background-color: var(--delete-button-color);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-button-hover-color);
+}
+

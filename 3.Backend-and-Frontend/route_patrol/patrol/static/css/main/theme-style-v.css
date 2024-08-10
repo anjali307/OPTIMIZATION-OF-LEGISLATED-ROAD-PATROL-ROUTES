@@ -1,0 +1,43 @@
+/* ========= All Colors For The Website ========== */
+:root {
+    /* Main Colors */
+    --primary-color: #475BE8; 
+    --secondary-color: #333; 
+
+    /* Background Colors*/
+    --bg-primary-color: #F4F4F4; 
+    --bg-secondary-color: #FCFCFC;
+
+    /* Text Colors */ 
+    --text-main-color: #666;
+    --text-primary-color: #808191; 
+    --text-secondary-color: #333;
+    /* --text-secondary-color: #11142D; */
+
+    /* Button Colors*/
+    --delete-button-color: #dc3545;
+    --delete-button-hover-color: #c82333;
+    --button-primary-hover-color: #594dcf;
+    --button-secondary-hover-color: #0056b3;
+
+    /* Message Colors */
+    --error-color: #e74c3c;
+    --error-bg-color: rgba(231, 76, 60, 0.1);
+    --success-color: #2ecc71; 
+    --success-bg-color: rgba(46, 204, 113, 0.1);
+
+    /* Border Colors*/
+    --primary-border-color: 1px solid #ddd;
+
+    /* Shadow Colors */
+    --box-shadow-main-color: 0 2px 5px rgba(108, 99, 255, 0.1);
+    --box-shadow-primary-color: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+    --box-shadow-secondary-color: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Route Colors*/
+    --route-a-color: #90E4FE34;
+    --route-b-color: #FE90D234;
+    --route-c-color: #FEBE9034;
+    --route-d-color: #AD90FE34;
+  }
+

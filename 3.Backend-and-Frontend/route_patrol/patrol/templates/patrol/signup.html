@@ -1,0 +1,84 @@
+{% extends 'patrol/authentication.html' %}
+
+{% block title %}Patrol | Signup{% endblock %}
+
+{% block content %}
+    <div class="authentication-box">
+        <h2>Create Your Account</h2>
+        <p>Welcome! Please enter your details.</p>
+        
+        <!-- Show Messages Start -->
+        {% if messages %}
+            <div class="message-container">
+                {% for message in messages %}
+                    {% if message.tags == 'success' %}
+                        <div class="success-message">{{ message }}</div>
+                    {% elif message.tags == 'danger' %}
+                        <div class="error-message">{{ message }}</div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <!-- Show Messages End-->
+
+        <!-- Sign Up Form Start -->
+        <form method="post">
+            {% csrf_token %}
+            {% if form.non_field_errors %}
+                <div class="message-container">
+                    {% for error in form.non_field_errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+           
+            <div class="input-group">
+                <label for="username">Username</label>
+                {{ form.username }}
+                {% if form.username.errors %}
+                    <div class="message-container">
+                        {% for error in form.username.errors %}
+                            <div class="error-message">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <div class="message-container">
+                        {% for error in form.email.errors %}
+                            <div class="error-message">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                <label for="password1">Password</label>
+                {{ form.password1 }}
+                {% if form.password1.errors %}
+                    <div class="message-container">
+                        {% for error in form.password1.errors %}
+                            <div class="error-message">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                <label for="password2">Repeat Password</label>
+                {{ form.password2 }}
+                {% if form.password2.errors %}
+                    <div class="message-container">
+                        {% for error in form.password2.errors %}
+                            <div class="error-message">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="signin-btn">Sign Up</button>
+        </form>
+        <p class="signup-link">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+    <!-- Sign Up Form End -->
+{% endblock %}

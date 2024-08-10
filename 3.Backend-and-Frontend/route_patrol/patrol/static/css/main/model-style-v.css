@@ -1,0 +1,42 @@
+/* ======= Model Page Style ===== */
+.model-performance-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    overflow:hidden;
+}
+
+.model-performance-card .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.model-performance-card img {
+    width: 650px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: width 0.4s;
+}
+
+ /* ========== Media Queries =========== */
+
+/* Medium <= 1650px */
+@media screen and (max-width: 1650px) {
+    .model-performance-card img {
+        width: 450px;
+    }
+
+}
+
+/* Medium <= 1200px */
+@media screen and (max-width: 1200px) {
+    .model-performance-card {
+        grid-template-columns: 1fr;
+      }
+
+}

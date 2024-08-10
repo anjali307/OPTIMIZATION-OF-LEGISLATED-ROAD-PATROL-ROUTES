@@ -1,0 +1,84 @@
+{% extends 'patrol/base.html' %}
+
+{% block title %}Patrol | Settings{% endblock %}
+
+{% block page_title %}SETTINGS{% endblock %}
+
+{% block content %}
+<div class="settings-container">
+    <h2>Profile Information</h2>
+
+    <!-- Show Messages Start -->
+    {% if messages %}
+        <div class="message-container">
+            {% for message in messages %}
+                {% if message.tags == 'success' %}
+                    <div class="success-message">{{ message }}</div>
+                {% elif message.tags == 'danger' %}
+                    <div class="error-message">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    <!-- Show Messages End -->
+
+    <!-- Settings Form Start -->
+    <form method="post" action="{% url 'settings' %}">
+        {% csrf_token %}
+        
+        {% if form.non_field_errors %}
+            <div class="message-container">
+                {% for error in form.non_field_errors %}
+                    <div class="error-message">{{ error }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <div class="form-group">
+            <label for="username">Username</label>
+            {{ form.username }}
+            {% if form.username.errors %}
+                <div class="message-container">
+                    {% for error in form.username.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="ignore" value="{{ user.email }}" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="old_password">Old Password</label>
+            {{ form.old_password }}
+            {% if form.old_password.errors %}
+                <div class="message-container">
+                    {% for error in form.old_password.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            <label for="new_password">New Password</label>
+            {{ form.new_password }}
+            {% if form.new_password.errors %}
+                <div class="message-container">
+                    {% for error in form.new_password.errors %}
+                        <div class="error-message">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="form-group">
+            <button type="submit">Update Settings</button>
+        </div>
+    </form>
+</div>
+<!-- Settings Form End -->
+{% endblock %}

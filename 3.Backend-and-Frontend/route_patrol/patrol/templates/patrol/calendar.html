@@ -1,0 +1,62 @@
+{% extends 'patrol/base.html' %}
+
+{% block title %}Patrol | Calendar{% endblock %}
+
+{% block page_title %}CALENDAR{% endblock %}
+
+{% block content %}
+    <!-- Calendar Heading Start-->
+    <div class="calendar-head">
+        <!-- Month and Year-->
+        <div class="calendar-month-year bottom-left medium-title">
+            <h3></h3>
+        </div>
+
+        <div class="bottom-right">
+            <div class="calendar-button-day-buttons">
+                <!-- Calendar Day-->
+                <div class="calendar-day secondary-button">
+                    <h4>Today</h4>
+                </div>
+
+                <!-- Next and Prev Button -->
+                <div class="prev-next-button">
+                    <div class="prev-button secondary-button">
+                        &lt;
+                    </div>
+                    <div class="next-button secondary-button">
+                        &gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Calendar Heading End-->
+
+    <!-- Calendar Card Start-->
+    <div class="calendar-card">
+        <div class="card">
+            <div class="calendar-header">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <!-- Calendar Body -->
+            <div class="calendar-body"></div>
+        </div>
+    </div>
+    <!-- Calendar Card End-->
+
+    <!-- Popup Start -->
+    <div class="popup" style="display: none;"></div>
+    <!-- Popup End -->
+
+    <!-- Script for Calendar Entries -->
+    <script>
+        const calendarEntries = JSON.parse('{{ calendar_entries|escapejs }}');
+    </script>
+{% endblock %}

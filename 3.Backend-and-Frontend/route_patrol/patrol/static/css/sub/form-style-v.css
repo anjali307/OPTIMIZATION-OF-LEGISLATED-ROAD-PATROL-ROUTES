@@ -1,0 +1,120 @@
+/* ====== Form Style ======== */
+.form-map-cards .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-map-cards #patrol-form, #new-route-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-map-cards #patrol-form div, #new-route-form div {
+    margin-bottom: 15px;
+}
+
+.form-map-cards .twenty-padding {
+    padding: 10px;
+}
+
+.form-map-cards label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary-color);
+}
+
+.form-map-cards .select-date {
+    cursor: pointer;
+}
+
+.form-map-cards input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: var(--primary-border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-main-color);
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.form-map-cards input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--box-shadow-main-color);
+}
+
+.form-map-cards select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: var(--bg-secondary-color);
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.form-map-cards option {
+    padding: 10px;
+    background-color: var(--bg-secondary-color);
+    color: var(--text-primary-color) !important;
+}
+
+.form-map-cards option:hover {
+    background-color: var(--bg-secondary-color);
+}
+
+.form-map-cards option.patrol-form-text {
+    color: var(--text-primary-color) !important;
+}
+
+.form-map-cards textarea {
+    resize: vertical;
+}
+
+.form-map-cards button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--bg-secondary-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.form-map-cards button[type="submit"]:hover {
+    background-color: var(--button-primary-hover-color);
+}
+
+.form-map-cards select {
+    background-color: var(--primary-color);
+    border: var(--primary-border-color);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--text-primary-color);
+    cursor: pointer;
+    appearance: none;
+    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20height%3D'24'%3E%3Cpath%20fill%3D'%23333'%20d%3D'M7%2010l5%205%205-5z'%2F%3E%3C%2Fsvg%3E") no-repeat right 10px center;
+    background-size: 20px 50px;
+}
+
+.form-map-cards select:hover {
+    border: var(--primary-border-color);
+}
+
+.form-map-cards select:focus {
+    border-color: var(--primary-color);
+    box-shadow: var(--box-shadow-main-color);
+    outline: none;
+}
+
+.form-map-cards option {
+    padding: 10px;
+    color: var(--text-primary-color);
+    background-color: var(--bg-primary-color);
+}
+
+.form-map-cards option:hover {
+    background-color: var(--bg-secondary-color);
+}

@@ -1,0 +1,46 @@
+/* ======= Maps Style ========= */
+.form-map-cards .card.map {
+    padding: 0 !important;
+    position: relative;
+}
+
+.form-map-cards #map {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.form-map-cards .map-error {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-primary-color);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* ==== Loading Spinner ====*/
+.form-map-cards .loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-left-color: var(--primary-color); 
+    animation: spin 1s linear infinite;
+    display: none; 
+    z-index: 1500;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

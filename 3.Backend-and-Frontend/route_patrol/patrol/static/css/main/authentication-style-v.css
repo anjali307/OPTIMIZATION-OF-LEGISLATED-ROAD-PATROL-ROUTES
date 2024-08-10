@@ -1,0 +1,131 @@
+/* ========== Authentication Page Style ============= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-secondary-color);
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.authentication-box {
+    background-color: var(--bg-secondary-color);
+    padding: 40px;
+    box-shadow: var(--box-shadow-secondary-color);
+    border-radius: 8px;
+    text-align: center;
+    width: 400px;
+}
+
+.authentication-box h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--text-secondary-color);
+}
+
+.authentication-box p {
+    margin-bottom: 20px;
+    color: var(--text-main-color);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-main-color);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: var(--primary-border-color);
+    border-radius: 5px;
+    font-size: 18px;
+    color: var(--text-main-color);
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: var(--text-primary-color);
+}
+
+.input-group input:focus, .input-group input:active {
+    border-color: var(--primary-color);
+    outline: 2px;
+    box-shadow: var(--box-shadow-secondary-color);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.remember-me label {
+    color: var(--text-main-color);
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signin-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--bg-secondary-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signin-btn:hover {
+    background-color: var(--button-primary-hover-color);
+}
+
+.signup-link {
+    margin-top: 20px;
+    color: var(--text-main-color);
+}
+
+.signup-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

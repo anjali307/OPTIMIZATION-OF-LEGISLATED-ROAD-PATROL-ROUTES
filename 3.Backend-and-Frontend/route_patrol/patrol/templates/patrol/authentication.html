@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    
+    <!-- Montserrat Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+   
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    
+
+    <!-- Custom CSS Sub-->
+    <link rel="stylesheet" href="{% url 'serve-static-file' 'css/sub/error-message-style-v.css' %}?v={{ timestamp }}">
+
+    <!-- Custom CSS Main-->
+    <link rel="stylesheet" href="{% url 'serve-static-file' 'css/main/authentication-style-v.css' %}?v={{ timestamp }}">
+    <link rel="stylesheet" href="{% url 'serve-static-file' 'css/main/theme-style-v.css' %}?v={{ timestamp }}">
+</head>
+<body>
+    <div class="aunthentication-container">
+        <!-- Main Start-->
+        <main class="main-container"></main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+        <!-- End Main-->
+    </div>
+
+    <!-- Custom JS Sub -->
+    <script src="{% url 'serve-static-file' 'js/sub/error-message-script-v.js' %}?v={{ timestamp }}"></script>
+
+</body>
+</html>

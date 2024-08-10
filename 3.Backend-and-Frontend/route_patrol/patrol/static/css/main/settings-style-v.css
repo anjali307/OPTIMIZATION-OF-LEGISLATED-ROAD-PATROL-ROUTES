@@ -1,0 +1,70 @@
+/* ===== Settings Page Style ======== */
+.settings-container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--bg-secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: var(--primary-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--text-primary-color);
+}
+
+.form-group input::placeholder {
+    font-size: 16px;
+    color: var(--text-primary-color);
+}
+
+.form-group input.ignore:focus {
+    border-color: var(--primary-border-color) !important;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--bg-secondary-color);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: var(--button-primary-hover-color);
+}
+
+.form-group button:active {
+    background-color: var(--button-secondary-hover-color);
+}
+

@@ -1,0 +1,27 @@
+{% extends 'patrol/base.html' %}
+
+{% block title %}Patrol | Model{% endblock %}
+
+{% block page_title %}MODEL{% endblock %}
+
+{% block content %}
+<!-- Sub Title Start -->
+<div class="sub-title"> 
+    <h3>Model Performance</h3>
+</div>
+<!-- Sub Title End -->
+
+<!-- Model Performance Card Start -->
+<div class="model-performance-card">
+    <div class="card">
+        <img src="data:image/png;base64,{{ plot_image_freq }}" alt="Frequency Plot">
+    </div>
+    <div class="card">
+        <img src="data:image/png;base64,{{ plot_image_interval }}" alt="Interval Plot">
+    </div>
+</div>
+<!-- Model Performance Card End -->
+
+{% endblock %}
+
+
